@@ -2,6 +2,8 @@
 /********** Base styles **********/
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -28,7 +30,6 @@ section {
     margin-right: 5px;
     margin-left: 5px;
     margin-top: 20px;
-    float: right;
 }
 
 .sectionTitle1 {
