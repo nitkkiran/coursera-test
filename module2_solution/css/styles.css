@@ -30,37 +30,26 @@ section {
     margin-top: 20px;
 }
 
+section > div {
+        border: 1px solid black;
+        font-size: 125%;
+        font-family: Helvetica;
+        text-align: center;
+        margin-bottom: 10px;
+        width: 140px;
+        float: right;
+}
+
 .sectionTitle1 {
     background-color: lightcoral;
-    border: 1px solid black;
-    font-size: 125%;
-    font-family: Helvetica;
-    text-align: center;
-    margin-bottom: 10px;
-    width: 140px;
-    float: right;
 }
 
 .sectionTitle2 {
     background-color: red;
-    border: 1px solid black;
-    font-size: 125%;
-    font-family: Helvetica;
-    text-align: center;
-    margin-bottom: 10px;
-    width: 140px;
-    float: right;
 }
 
 .sectionTitle3 {
     background-color: yellow;
-    border: 1px solid black;
-    font-size: 125%;
-    font-family: Helvetica;
-    text-align: center;
-    margin-bottom: 10px;
-    width: 140px;
-    float: right;
 }
 
 .row {
@@ -77,7 +66,7 @@ section {
 
 /********** Medium devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-     .col-md-6, .col-md-12 {
+    .col-md-6, .col-md-12 {
         float: left;
     }
 
