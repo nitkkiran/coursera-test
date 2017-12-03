@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -13,19 +13,65 @@
         h1 {
             margin-bottom: 30px;
             text-align: center;
+            font-size: 175%;
+            font-family: Helvetica;
         }
 
         p {
-            border: 1px solid black;
-            background-color: slategrey;
-            width: 95%;
-            height: 150px;
-            margin-right: auto;
-            margin-left: auto;
             font-family: Helvetica;
             color: black;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: 50px;
+            position: relative;
         }
 
+        section {
+            background-color: slategrey;
+            border: 2px solid black;
+            width: 95%;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .sectionTitle1 {
+            background-color: lightcoral;
+            border: 2px solid black;
+            font-size: 125%;
+            font-family: Helvetica;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 30%;
+            float: right;
+           
+        }
+
+        .sectionTitle2 {
+            background-color: red;
+            border: 2px solid black;
+            font-size: 125%;
+            font-family: Helvetica;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 30%;
+            float: right;
+           
+        }
+
+        .sectionTitle3 {
+            background-color: yellow;
+            border: 2px solid black;
+            font-size: 125%;
+            font-family: Helvetica;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 30%;
+            float: right;
+            
+        }
         .row {
             width: 100%;
         }
@@ -34,7 +80,6 @@
         @media (min-width: 992px) {
             .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
                 float: left;
-                
             }
 
             .col-lg-1 {
@@ -90,7 +135,7 @@
         @media (min-width: 768px) and (max-width: 991px) {
             .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
                 float: left;
-             }
+            }
 
             .col-md-1 {
                 width: 8.33%;
@@ -146,9 +191,30 @@
     <h1>Our Menu</h1>
 
     <div class="row">
-        <div class="col-lg-4 col-md-6"><p>Item 1</p></div>
-        <div class="col-lg-4 col-md-6"><p>Item 2</p></div>
-        <div class="col-lg-4 col-md-12"><p>Item 3</p></div>
+        <div class="col-lg-4 col-md-6">
+            <section>
+                <div class="sectionTitle1">Chicken</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at nisi quis lectus dignissim mollis nec vitae magna. Proin molestie ipsum eu sollicitudin blandit. Praesent nec sapien sed lorem venenatis egestas. Nullam dolor metus, suscipit at semper nec, porta sit amet nisl. Nulla a volutpat augue. Fusce porttitor nulla leo, a posuere magna luctus at. Mauris eget neque tincidunt, semper sapien id, tincidunt lorem. Integer id tincidunt leo. Nullam euismod, felis id pharetra vehicula, est elit pulvinar velit, lacinia vulputate tortor lorem eget eros. Ut urna massa, convallis vitae dictum non, gravida nec justo. Phasellus congue non purus vel tincidunt.
+                </p>
+            </section>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <section>
+                <div class="sectionTitle2">Beef</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at nisi quis lectus dignissim mollis nec vitae magna. Proin molestie ipsum eu sollicitudin blandit. Praesent nec sapien sed lorem venenatis egestas. Nullam dolor metus, suscipit at semper nec, porta sit amet nisl. Nulla a volutpat augue. Fusce porttitor nulla leo, a posuere magna luctus at. Mauris eget neque tincidunt, semper sapien id, tincidunt lorem. Integer id tincidunt leo. Nullam euismod, felis id pharetra vehicula, est elit pulvinar velit, lacinia vulputate tortor lorem eget eros. Ut urna massa, convallis vitae dictum non, gravida nec justo. Phasellus congue non purus vel tincidunt.
+                </p>
+            </section>
+        </div>
+        <div class="col-lg-4 col-md-12">
+            <section>
+                <div class="sectionTitle3">Sushi</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at nisi quis lectus dignissim mollis nec vitae magna. Proin molestie ipsum eu sollicitudin blandit. Praesent nec sapien sed lorem venenatis egestas. Nullam dolor metus, suscipit at semper nec, porta sit amet nisl. Nulla a volutpat augue. Fusce porttitor nulla leo, a posuere magna luctus at. Mauris eget neque tincidunt, semper sapien id, tincidunt lorem. Integer id tincidunt leo. Nullam euismod, felis id pharetra vehicula, est elit pulvinar velit, lacinia vulputate tortor lorem eget eros. Ut urna massa, convallis vitae dictum non, gravida nec justo. Phasellus congue non purus vel tincidunt.
+                </p>
+            </section>
+        </div>
     </div>
 </body>
 </html>
