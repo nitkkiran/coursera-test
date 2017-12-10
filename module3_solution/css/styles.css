@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #header-nav {
     background-color: grey;
 }
@@ -24,11 +28,15 @@
     border: 1px solid;
 }
 
+#collapsable-nav {
+    overflow-y: hidden;
+}
+
 #nav-list a {
     color: gray;
     text-align: center;
     background: white;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
     #nav-list a span {
@@ -51,4 +59,10 @@ section {
 .sectionTitle {
     font-size: 150%;
     margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    #collapsable-nav{
+        background-color:white;
+    }
 }
