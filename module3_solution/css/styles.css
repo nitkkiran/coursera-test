@@ -1,0 +1,15 @@
+#header-nav {
+    background-color: grey;
+}
+
+.navbar-brand h1 {
+    font-family: Helvetica;
+    color: black;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 0;
+}
+
+    .navbar-brand h1:hover, .navbar-brand h1:focus {
+        text-decoration: none;
+    }
