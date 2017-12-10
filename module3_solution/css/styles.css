@@ -13,3 +13,9 @@
     .navbar-brand h1:hover, .navbar-brand h1:focus {
         text-decoration: none;
     }
+
+.pageheading {
+    font-family: Helvetica;
+    color: black;
+    font-weight: bold;
+}
