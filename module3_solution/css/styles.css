@@ -19,3 +19,39 @@
     color: black;
     font-weight: bold;
 }
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+    border: 1px solid;
+}
+
+#nav-list a {
+    color: gray;
+    text-align: center;
+    background: white;
+}
+
+#nav-list a span {
+    font-size: 1.5em;
+}
+
+section {
+    background-color: grey;
+    border: 1px solid black;
+    height: 1000px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+    section > div {
+       
+        font-size: 125%;
+        font-family: Helvetica;
+        text-align: center;
+       
+       
+    }
+.sectionTitle {
+   font-size: 150%;
+   margin-bottom: 10px;
+}
