@@ -12,8 +12,10 @@
             var inputDishes = $scope.dishes;
             if (inputDishes.length === 0) {
                 $scope.outputOfCheck = "Please enter data first";
+                $scope.color = "red";
             }
             else {
+                $scope.color = "green";
                 var arrayOfDishes = inputDishes.split(",");
                 if(arrayOfDishes.length <= 3)
                 {
