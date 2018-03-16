@@ -24,7 +24,9 @@
 
   function NarrowItDownDirectiveController() {
     var narrowItDown = this;
-
+    narrowItDown.checkEmptyList = function() {
+      return (narrowItDown.found.length == 0);
+    };
   }
 
   NarrowItDownController.$inject = ['MenuSearchService', '$scope'];
@@ -35,10 +37,12 @@
     narrowItDown.found = [];
 
     narrowItDown.search = function() {
-      var promise = MenuSearchService.getMatchedMenuItems($scope.searchTerm);
-      promise.then(function(response) {
-        narrowItDown.found = response;
-      })
+      if ($scope.searchTerm.length > 0) {
+        var promise = MenuSearchService.getMatchedMenuItems($scope.searchTerm);
+        promise.then(function(response) {
+          narrowItDown.found = response;
+        })
+      }
     };
 
     narrowItDown.removeItem = function(itemIndex) {
