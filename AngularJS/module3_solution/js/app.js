@@ -4,19 +4,46 @@
   angular.module('NarrowItDownApp', [])
     .controller('NarrowItDownController', NarrowItDownController)
     .service('MenuSearchService', MenuSearchService)
+    .directive('foundItems', foundItemsDirective)
     .constant('ApiPath', "https://davids-restaurant.herokuapp.com/menu_items.json");
+
+  function foundItemsDirective() {
+    var ddo = {
+      templateUrl: 'foundItemsList.html',
+      scope: {
+        found: '<',
+        onRemove: '&'
+      },
+      controller: NarrowItDownDirectiveController,
+      controllerAs: 'narrowItDown',
+      bindToController: true
+    };
+
+    return ddo;
+  }
+
+  function NarrowItDownDirectiveController() {
+    var narrowItDown = this;
+
+  }
 
   NarrowItDownController.$inject = ['MenuSearchService', '$scope'];
 
   function NarrowItDownController(MenuSearchService, $scope) {
     var narrowItDown = this;
     $scope.searchTerm = "";
+    narrowItDown.found = [];
 
     narrowItDown.search = function() {
-      console.log("Search function called for search term " + $scope.searchTerm);
-      var found = MenuSearchService.getMatchedMenuItems($scope.searchTerm);
-      console.log(found);
-    }
+      var promise = MenuSearchService.getMatchedMenuItems($scope.searchTerm);
+      promise.then(function(response) {
+        narrowItDown.found = response;
+      })
+    };
+
+    narrowItDown.removeItem = function(itemIndex) {
+      narrowItDown.found.splice(itemIndex, 1);
+    };
   }
 
   MenuSearchService.$inject = ['$http', 'ApiPath'];
@@ -25,7 +52,6 @@
     var service = this;
 
     service.getMatchedMenuItems = function(searchTerm) {
-      console.log("getMatchedMenuItems function called for search term " + searchTerm);
       return $http({
         method: "GET",
         url: (ApiPath),
