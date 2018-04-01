@@ -1,34 +1,35 @@
-(function () {
-'use strict';
+(function() {
+  'use strict';
 
-angular.module('MenuApp')
-.config(RoutesConfig);
+  angular.module('MenuApp')
+    .config(RoutesConfig);
 
-RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
-function RoutesConfig($stateProvider, $urlRouterProvider) {
+  RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-  // Redirect to home page if no other URL matches
-  $urlRouterProvider.otherwise('/');
+  function RoutesConfig($stateProvider, $urlRouterProvider) {
 
-  // *** Set up UI states ***
-  $stateProvider
+    // Redirect to home page if no other URL matches
+    $urlRouterProvider.otherwise('/');
 
-  // Home page
-  .state('home', {
-    url: '/',
-    templateUrl: 'src/menuapp/templates/home.template.html'
-  })
+    // *** Set up UI states ***
+    $stateProvider
 
-  .state('mainList', {
-      url: '/main-list',
-      templateUrl: 'src/shoppinglist/templates/main-shoppinglist.template.html',
-      controller: 'MainShoppingListController as mainList',
-      resolve: {
-        items: ['ShoppingListService', function (ShoppingListService) {
-          return ShoppingListService.getItems();
-        }]
-      }
-    })
-}
+      // Home page
+      .state('home', {
+        url: '/',
+        templateUrl: 'src/menuapp/templates/home.template.html'
+      })
+
+      .state('categories', {
+        url: '/categories',
+        templateUrl: 'src/menuapp/templates/main-categorieslist.template.html',
+        controller: 'MainCategoriesListController as mainList',
+        resolve: {
+          items: ['MenuDataService', function(MenuDataService) {
+            return MenuDataService.getAllCategories();
+          }]
+        }
+      });
+  }
 
 })();

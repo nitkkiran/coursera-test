@@ -8,6 +8,7 @@
 
 
   MenuDataService.$inject = ['$http', 'CategoriesApiPath', 'ItemsApiPath']
+
   function MenuDataService($http, CategoriesApiPath, ItemsApiPath) {
     var service = this;
 
