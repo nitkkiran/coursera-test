@@ -26,7 +26,12 @@
         controller: 'MainCategoriesListController as mainList',
         resolve: {
           items: ['MenuDataService', function(MenuDataService) {
-            return MenuDataService.getAllCategories();
+            var promise = MenuDataService.getAllCategories();
+            promise.then(function(response) {
+              console.log(response.data);
+              return response.data;
+            })
+
           }]
         }
       });
