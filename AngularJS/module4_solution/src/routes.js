@@ -26,11 +26,10 @@
         controller: 'MainCategoriesListController as mainList',
         resolve: {
           items: ['MenuDataService', function(MenuDataService) {
-            var promise = MenuDataService.getAllCategories();
-            promise.then(function(response) {
-              return response.data;
-            })
-
+            return MenuDataService.getAllCategories()
+              .then(function(response) {
+                return response.data;
+              });
           }]
         }
       });
