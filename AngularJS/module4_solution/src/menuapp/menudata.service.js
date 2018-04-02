@@ -22,7 +22,7 @@
     service.getItemsForCategory = function(categoryShortName) {
       return $http({
         method: "GET",
-        url: (CategoriesApiPath + categoryShortName)
+        url: (ItemsApiPath + categoryShortName)
       });
     };
 
