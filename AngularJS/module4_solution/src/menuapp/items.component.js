@@ -2,8 +2,8 @@
   'use strict';
 
   angular.module('data')
-    .component('categoryitems', {
-      templateUrl: 'src/menuapp/templates/categories.template.html',
+    .component('items', {
+      templateUrl: 'src/menuapp/templates/items.template.html',
       bindings: {
         categoryitems: '<'
       }

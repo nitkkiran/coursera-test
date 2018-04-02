@@ -43,9 +43,7 @@
             function($stateParams, MenuDataService) {
               return MenuDataService.getItemsForCategory($stateParams.itemName)
                 .then(function(response) {
-                  var itemsOfCategory = response.data.menu_items;
-                  console.log(itemsOfCategory);
-                  return itemsOfCategory;
+                  return response.data.menu_items;
                 });
             }
           ]
