@@ -113,10 +113,23 @@ h3.menu-item-title {
 }
 /* END SINGLE CATEGORY PAGE */
 
+/* SIGN UP PAGE */
+#signup-title + div {
+    margin-bottom: 50px;
+}
 
+.signupsection {
+    margin-top: 50px;
+}
+
+.signupLabel {
+    margin-right: 200px;
+    margin-top: 20px;
+}
+/* SIGN UP PAGE */
 /********** Large devices only **********/
 @media (min-width: 1200px) {
-  .container .jumbotron {
+    .container .jumbotron {
     background: url('../images/jumbotron_1200.jpg') no-repeat;
     height: 675px;
   }
