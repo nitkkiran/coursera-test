@@ -14,7 +14,7 @@
         $scope.favDish = "";
         $scope.favoritedishinvalid = false;
         $scope.submit = function () {
-            console.write("Submit Clicked");
+            console.log("Submit Clicked");
 
         };
     }
