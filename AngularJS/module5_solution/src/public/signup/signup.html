@@ -5,28 +5,28 @@
             <div class="signupsection">
                 <div class="signupEntry">
                     First Name:
-                    <input style="margin-left:40px" type="text" name="firstName" ng-model="signupCtrl.firstName" required>
+                    <input style="margin-left:40px;color:black" type="text" name="firstName" ng-model="firstName" required>
                     <span ng-if="signupForm.firstName.$error.required && signupForm.firstName.$touched">
                         First Name cannot be empty
                     </span>
                 </div>
                 <div class="signupEntry">
                     Last Name:
-                    <input style="margin-left:42px" type="text" name="lastName" ng-model="signupCtrl.lastName" required>
+                    <input style="margin-left:42px;color:black" type="text" name="lastName" ng-model="lastName" required>
                     <span ng-if="signupForm.lastName.$error.required && signupForm.lastName.$touched">
                         Last Name cannot be empty
                     </span>
                 </div>
                 <div class="signupEntry">
                     Email Address:
-                    <input style="margin-left:16px" type="email" name="email" ng-model="signupCtrl.email" required>
+                    <input style="margin-left:16px;color:black" type="email" name="email" ng-model="email" required>
                     <span ng-if="signupForm.email.$invalid && signupForm.email.$touched">
                         Must be a valid email address: handle@domain format
                     </span>
                 </div>
                 <div class="signupEntry">
                     Phone Number:
-                    <input style="margin-left:12px" type="text" name="phone" ng-model="signupCtrl.phone"
+                    <input style="margin-left:12px;color:black" type="text" name="phone" ng-model="phone"
                            placeholder="Phone ###-###-####"
                            pattern="(\d{3})-(\d{3})-(\d{4})" required>
                     <span ng-if="signupForm.phone.$invalid && signupForm.phone.$touched">
@@ -35,12 +35,12 @@
                 </div>
                 <div class="signupEntry">
                     Favorite Dish:
-                    <input style="margin-left:24px" type="text" name="favoritedish" ng-model="signupCtrl.favDish" required>
-                    <span ng-if="signupForm.favoritedish.$error.required && signupForm.favoritedish.$touched">
-                        Favourite dish cannot be empty
+                    <input style="margin-left:24px;color:black" type="text" name="favoritedish" ng-model="favDish">
+                    <span ng-if="favoritedishinvalid">
+                        No such menu number exists
                     </span>
                 </div>
-                <button style="width:100px;margin-top:40px;color:darkred" ng-disabled="signupForm.$invalid">Submit</button>
+                <button style="width:100px;margin-top:40px;color:darkred" ng-click="signupCtrl.submit()" ng-disabled="signupForm.$invalid">Submit</button>
             </div>
         </form>
     </fieldset>

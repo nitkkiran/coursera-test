@@ -12,6 +12,11 @@
         $scope.email = "";
         $scope.phone = "";
         $scope.favDish = "";
+        $scope.favoritedishinvalid = false;
+        $scope.submit = function () {
+            console.write("Submit Clicked");
+
+        };
     }
 
 
