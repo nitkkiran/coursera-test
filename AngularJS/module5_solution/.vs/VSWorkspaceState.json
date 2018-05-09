@@ -6,8 +6,9 @@
     "\\src\\common",
     "\\src\\public",
     "\\src\\public\\menu",
+    "\\src\\public\\menu-items",
     "\\src\\public\\signup"
   ],
-  "SelectedNode": "\\css\\public.css",
+  "SelectedNode": "\\src\\public\\signup\\signup.controller.js",
   "PreviewInSolutionExplorer": false
 }
