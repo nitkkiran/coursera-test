@@ -20,6 +20,7 @@
             var status = SignupService.getCategoryMenuItems($scope.favDish).then(function (response) {
                 if (response === 200)
                 {
+                    SignupService.saveInformation($scope.firstName, $scope.lastName, $scope.email, $scope.phone, $scope.favDish);
                     $scope.responseMsg = "Your information has been saved";
                 }
                 else

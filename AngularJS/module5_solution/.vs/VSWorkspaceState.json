@@ -4,10 +4,12 @@
     "\\css",
     "\\src",
     "\\src\\common",
+    "\\src\\common\\loading",
     "\\src\\public",
     "\\src\\public\\menu",
-    "\\src\\public\\menu-items",
-    "\\src\\public\\signup"
+    "\\src\\public\\menu-category",
+    "\\src\\public\\menu-item",
+    "\\src\\public\\menu-items"
   ],
   "SelectedNode": "\\src\\public\\signup\\signup.controller.js",
   "PreviewInSolutionExplorer": false
