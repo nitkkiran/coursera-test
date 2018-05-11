@@ -17,7 +17,6 @@
             $scope.favDish = information.favDish;
             SignupService.GetDescription($scope.favDish).then(function (response) {
                 $scope.favDishDescription = response;
-                console.log($scope.favDishDescription);
             });
             $scope.ApiPath = CategoryApiPath;
         }
