@@ -7,11 +7,12 @@
     SignupController.$inject = ['$scope', 'SignupService'];
     function SignupController($scope, SignupService) {
         var $ctrl = this;
-        $scope.firstName = "";
-        $scope.lastName = "";
-        $scope.email = "";
-        $scope.phone = "";
-        $scope.favDish = "";
+        var information = SignupService.GetInformation();
+        $scope.firstName = information.firstName;
+        $scope.lastName = information.lastName;
+        $scope.email = information.email;
+        $scope.phone = information.phone;
+        $scope.favDish = information.favDish;
         $scope.favoritedishinvalid = false;
         $scope.responseMsg = "";
         $scope.submit = function () {
