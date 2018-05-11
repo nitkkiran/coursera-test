@@ -34,6 +34,13 @@
         service.GetInformation = function () {
             return service.information;
         }
+
+        service.GetDescription = function (favDish) {
+            return $http.get(CategoryApiPath + '/menu_items/' + favDish + '.json').then(function (response) {
+                return response.data.description;
+            });
+        }
+
     }
 
 })();

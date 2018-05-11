@@ -4,8 +4,8 @@
     angular.module('public')
         .controller('InfoController', InfoController);
 
-    InfoController.$inject = ['$scope', 'SignupService'];
-    function InfoController($scope, SignupService) {
+    InfoController.$inject = ['$scope', 'SignupService', 'CategoryApiPath'];
+    function InfoController($scope, SignupService, CategoryApiPath) {
         var $ctrl = this;
         $scope.infoAvailable = SignupService.GetIsInfoAvailable();
         if ($scope.infoAvailable) {
@@ -15,8 +15,13 @@
             $scope.email = information.email;
             $scope.phone = information.phone;
             $scope.favDish = information.favDish;
+            SignupService.GetDescription($scope.favDish).then(function (response) {
+                $scope.favDishDescription = response;
+                console.log($scope.favDishDescription);
+            });
+            $scope.ApiPath = CategoryApiPath;
         }
-        
+
         $scope.submit = function () {
             $scope.favoritedishinvalid = false;
             $scope.responseMsg = "";

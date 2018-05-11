@@ -1,6 +1,16 @@
 <div class="container">
     <div ng-show="infoAvailable">
         <h2 id="info-title" class="text-center">Your Registered Information</h2>
+        <div>First Name      : {{firstName}}</div>
+        <div>Last Name       : {{lastName}}</div>
+        <div>Email           : {{email}}</div>
+        <div>Phone           : {{phone}}</div>
+        <div>Favourite Dish</div>
+        <div>{{favDish}}</div>
+        <div>{{favDishDescription}}</div>
+        <div>
+            <img class="img-responsive" width="250" height="150" ng-src="{{ApiPath}}/images/{{favDish}}.jpg" />
+        </div>
     </div>
     <div ng-hide="infoAvailable">
         Not Signed Up Yet. 
